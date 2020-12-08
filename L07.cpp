@@ -23,16 +23,15 @@ bool ldoskonala(int &refa) {
     }
 }
 
-/*int potegowanie(int x, int n) {
+double potegowanie(double &x,int n) {
     
-    if(n == 0) {
+    if(n == 0) 
         return 1;
-    }
-    else {
-        int zmienna = potegowanie(x, n--);
-        return x * zmienna;
-    }
-}*/
+    
+    double zmienna = potegowanie(x, n-1);
+    return x * zmienna;
+    
+}
 
 void binar(int &w) {
     int i = 0;
@@ -52,21 +51,25 @@ void binar(int &w) {
 
 int main()
 {
-    int a,b;
-
+    int a, b;
+    double x = 1;
+    
     cout << "Podaj liczbe i sprawdz czy jest doskonala -> ";
     cin >> a;
     cout << ldoskonala(a) << endl;
     
-    /*cout << "Podaj podstawe potegi -> ";
-    cin >> a;
+    
+    cout << "Podaj podstawe potegi -> ";
+    cin >> x;
     cout << "Podaj wykladnik potegi -> ";
     cin >> b;
-    potegowanie(a,b);
-    */
+    cout << potegowanie(x, b) << endl;
+    
+   
     cout << "Podaj liczbe dziesietna ktora chcesz zamienic na liczbe binarna -> ";
     cin >> a;
     binar(a);
+    
 }
 #endif // Zadanie7A
 
