@@ -1,3 +1,4 @@
 ﻿  L07.cpp
-D:\studia\PPK\Repo\L07\L07\L07\L07.cpp(54,9): warning C4101: "a": lokalna zmienna, do której nie istnieje odwołanie
-  L07.vcxproj -> D:\studia\PPK\Repo\L07\L07\Debug\L07.exe
+D:\studia\PPK\Repo\L07\L07\L07\L07.cpp(81,15): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+D:\studia\PPK\Repo\L07\L07\L07\L07.cpp(96,18): error C2660: "rzut": funkcja nie przyjmuje 0 argumentów
+D:\studia\PPK\Repo\L07\L07\L07\L07.cpp(79,5): message : zobacz deklarację „rzut”

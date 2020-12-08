@@ -1,7 +1,8 @@
 ﻿#include <iostream>
+#include <time.h>
 using namespace std;
 
-#define Zadanie7A
+#define Zadanie7B
 
 
 #ifdef Zadanie7A
@@ -72,5 +73,38 @@ int main()
     
 }
 #endif // Zadanie7A
+
+#ifdef Zadanie7B
+
+int rzut(int wynik)
+{
+    srand(time(0));
+    return wynik = rand()%10 + 1;
+}
+
+int test(int liczba_kosci, int stopien)
+{
+    int suma = 0;
+    for (int i = 0; i < liczba_kosci; i++)
+    {
+        if (stopien == rzut(0))
+        {
+            suma++;
+        }
+        if (rzut(0) == 1)
+        {
+            suma--;
+        }
+        
+    }
+    return suma;
+}
+
+int main() 
+{
+    
+}
+
+#endif // Zadanie7B
 
 
