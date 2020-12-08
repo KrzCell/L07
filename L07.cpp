@@ -1,9 +1,11 @@
 ﻿#include <iostream>
 #include <time.h>
+#include <stdlib.h>
+#include <chrono>
+#include <thread>
 using namespace std;
 
 #define Zadanie7B
-
 
 #ifdef Zadanie7A
 
@@ -78,33 +80,44 @@ int main()
 
 int rzut(int wynik)
 {
-    srand(time(0));
-    return wynik = rand()%10 + 1;
+    return wynik = rand() % 10 + 1;
 }
 
 int test(int liczba_kosci, int stopien)
 {
     int suma = 0;
+    int kosc = 0;
+    srand(time(NULL));
     for (int i = 0; i < liczba_kosci; i++)
     {
-        if (stopien == rzut(0))
+        kosc = rzut(0);
+        if (kosc >= stopien)
         {
             suma++;
         }
-        if (rzut(0) == 1)
+        if (kosc == 1)
         {
             suma--;
         }
-        
     }
     return suma;
 }
 
 int main() 
 {
-    
+    int a=0, b=0;
+    cout << "Podaj statystyki postaci (liczbe kosci) -> ";
+    cin >> a;
+    cout << "Podaj stopien trudnosci -> ";
+    cin >> b;
+    cout << "Wynik testu -> " << test(a, b);
 }
 
 #endif // Zadanie7B
 
-
+#ifdef Zadanie7C
+int main()
+{
+    
+}
+#endif
